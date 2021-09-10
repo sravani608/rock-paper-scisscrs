@@ -91,3 +91,30 @@ export const PlayAgain = styled.button`
   width: 250px;
   margin-bottom: 30px;
 `
+export const ModalContainer = styled.div`
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+`
+export const ImageContainer = styled.div`
+  padding: 20px;
+`
+export const PopupImage = styled.img`
+  height: 400px;
+  width: 400px;
+`
+export const CloseButton = styled.button`
+  height: 20px;
+  width: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  margin-left: 20px;
+  margin-bottom: 420px;
+  border: none;
+`
+export const PopupContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`

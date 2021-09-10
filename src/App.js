@@ -18,6 +18,11 @@ import {
   Result,
   ParticipantContainer,
   PlayAgain,
+  ModalContainer,
+  ImageContainer,
+  PopupImage,
+  CloseButton,
+  PopupContainer,
 } from './Components/styledComponents'
 
 const choicesList = [
@@ -99,7 +104,7 @@ class App extends Component {
   }
 
   ReactPopUp = () => (
-    <div className="popup-container">
+    <PopupContainer>
       <Popup
         modal
         trigger={
@@ -110,27 +115,19 @@ class App extends Component {
       >
         {close => (
           <>
-            <div className="container">
-              <div>
-                <img
+            <ModalContainer>
+              <ImageContainer>
+                <PopupImage
                   src="https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/rules-image.png"
                   alt="rules"
-                  className="rules-img"
                 />
-              </div>
-
-              <button
-                type="button"
-                onClick={() => close()}
-                className="close-button"
-              >
-                {GrFormClose}
-              </button>
-            </div>
+              </ImageContainer>
+              <CloseButton onClick={() => close()}>{GrFormClose}</CloseButton>
+            </ModalContainer>
           </>
         )}
       </Popup>
-    </div>
+    </PopupContainer>
   )
 
   renderHomePage = () => (
